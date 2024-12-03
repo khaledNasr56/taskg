@@ -1,0 +1,276 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600;700&display=swap');
+:root {
+    --gray-color: #808080;
+    --black-color: #000000;
+    --white-color: #FFFFFF;
+    --violet-color: #372863;
+}
+
+*{
+    font-family: 'Nunito', sans-serif;
+    margin: 0; padding: 0;
+    box-sizing: border-box;
+    outline: none; border: none;
+    text-decoration: none;
+    text-transform: capitalize;
+    transition: all .2s linear;
+}
+
+body{
+    overflow-x: hidden;
+}
+
+.header{
+    background: #fff;
+    top: 0; left: 0; right: 0;
+    position: fixed;
+    z-index: 1000;
+    display: flex;
+    justify-content:space-between;
+    text-align: center;
+    padding: 14px ;
+    
+
+}
+.header .logo img{
+    width: 182px;
+    height:45px;
+    justify-content:center;
+}
+.header .nav-bar ul{
+    display: flex;
+    list-style: none;
+}
+.header .nav-bar{
+    display: flex;
+}
+.header .nav-bar ul .list{
+    list-style: none;
+}
+.header .nav-bar a{
+    color: #787373;
+    font-size: 1rem;
+    margin: 0 1.2rem;
+}
+ .nav-bar  li .join {
+    color: var(--white-color);
+    font-size:1.2rem;
+    background-color: var(--violet-color);
+    padding:9px 13px;
+    border-radius: 7px;
+    margin-top: 10rem;
+
+}
+
+#menu-btn{
+    display: none;
+}
+
+.header .nav-bar.active{
+    top: 10rem;
+}
+.header .nav-bar #close-navbar{
+    display: block;
+    left: 0;
+    top: 0;
+}
+@media (max-width:770px) {
+    html{
+        font-size: 62%;
+        overflow-x: hidden;
+        scroll-behavior: smooth;
+        scroll-padding-top: 7.5rem;
+     }
+     body{
+        overflow-x: hidden;
+    }
+     
+    
+    #menu-btn{
+        display: inline-block;
+        right: 4;
+        margin-right: 2rem;
+        margin-top: .5rem;
+        font-size: 32px;
+    }
+    #close-navbar{
+        font-size: 22px;
+
+    }
+    .header{
+        width:100%;
+        justify-content: space-between;
+    }
+
+    .header .nav-bar {
+        position: fixed;
+        top: -125% ;left: 0;
+        width: 100%;
+        background: #fff;
+        height: 100%;
+        display: flex;
+        z-index: 1200;
+        flex-direction: column;
+        gap: 30px;
+    }
+    .header .nav-bar ul{
+        width: 100%;
+        flex-direction: column;
+        gap: 30px;
+    }
+    
+    .header .nav-bar a{
+        font-size: 14px;
+        display: block;
+        margin: 1rem ;
+        text-align: center;
+        
+    }
+
+   .nav-bar  li a .join  
+   {
+    list-style: none;
+    color: var(--white-color);
+    font-size:1.2rem;
+    background-color: var(--violet-color);
+    padding:10px 29px;
+    border-radius: 7px;
+    margin-top: 10rem;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+}
+
+.container .img img{
+
+    width: 200px;
+    height: 400px;
+}
+.container{
+    flex-direction: column;
+    min-width: 400px;
+    
+}
+
+.content .learn {
+    margin-left: 12rem;
+    justify-content: center;
+    align-items: center;
+    max-width: 330px;
+    font-size: 1.3rem;
+}
+
+.content h3{
+    font-size: 1.6rem;
+    width: 240px;
+    margin-left: 15rem;
+    justify-content: center;
+    align-items: center;
+}
+.content .p{
+    display: block;
+    width: 290px;
+    margin-left: 15rem;
+    margin-top: 1rem;
+    font-size:12px ;
+}
+.content .email-signup{
+    width:50%;
+    margin-left: 15rem;
+    justify-content: center;
+    align-items: center;
+}
+
+.compaines{
+    margin-left: 13rem;
+    justify-content: center;
+    align-items: center;
+}
+}
+
+.container {
+    width: 100%;
+    min-height: 80svh;
+    padding-top: 110px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+    padding-left: 3rem;
+}
+.content{
+    width: 700px;
+    gap: 8px;
+}
+.img img{
+    width:500px;
+    height: 500px;
+}
+.learn{
+    background-color: var(--violet-color);
+    color: var(--white-color);
+    width: 458px;
+    padding: 5px 25px;
+    align-items: center;
+    gap: 5px;
+    border-radius: 25px;
+    font-size: 1rem;
+    font-weight: 300;
+}
+.learn a{
+    color:var(--white-color);
+    text-decoration:underline;
+    font-weight: 800;
+}
+.content h3{
+    color: var(--violet-color);
+    font-size:3rem;
+    font-weight: 500;
+    margin-top: 1rem;
+}
+.content .p{
+    color:var(--gray-color);
+    line-height: 1.6rem;
+}
+
+.email-signup{
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.email-signup input {
+    flex: 1;
+    margin-right:1rem ;
+    padding: 10px 17px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+  }
+  
+  .email-signup button {
+    background-color: var(--violet-color);
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    font-size: 16px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+.compaines p{
+    margin-top: 2rem;
+    color:var(--gray-color);
+    margin-left:12px ;
+    font-size:1.1rem;
+}
+.logos i{
+    margin: 10px;
+    background-color:#ccc;
+    color: white;
+    font-size: 19px;
+    padding: 12px;
+    border-radius: 50%;
+}
+  
+  
+  
+  
